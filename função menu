@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+
+// Função para o menu de opções
+void menu() {
+    int opcao;
+
+    do {
+        printf("\nMenu:\n");
+        printf("1. Cadastro de Usuário\n");
+        printf("2. Cadastro de Produtos\n");
+        printf("3. Impressão de Relatórios\n");
+        printf("4. Sair do Sistema\n");
+        printf("Digite a opção desejada: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1:
+                printf("Opção 1 - Cadastro de Usuário\n");
+                // Aqui você colocaria o código para cadastrar um usuário
+                break;
+            case 2:
+                printf("Opção 2 - Cadastro de Produtos\n");
+                // Aqui você colocaria o código para cadastrar um produto
+                break;
+            case 3:
+                printf("Opção 3 - Impressão de Relatórios\n");
+                // Aqui você colocaria o código para imprimir os relatórios
+                break;
+            case 4:
+                printf("Saindo do sistema...\n");
+                break;
+            default:
+                printf("Opção inválida!\n");
+        }
+    } while (opcao != 4);
+}
+
+
