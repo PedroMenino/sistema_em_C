@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <string.h>
+
+// Função para a tela de login
+int login() {
+    char cpf[12]; 
+    char senha[7]; 
+    int tentativas = 3;
+
+    while (tentativas > 0) {
+        printf("Digite seu CPF (somente números): ");
+        scanf("%s", cpf);
+
+        printf("Digite sua senha (6 dígitos): ");
+        scanf("%s", senha);
+
+        if (strlen(cpf) != 11) {
+            printf("CPF inválido! Digite 11 dígitos.\n");
+            tentativas--;
+            continue; 
+        }
+
+        if (strlen(senha) != 6) {
+            printf("Senha inválida! Digite 6 dígitos.\n");
+            tentativas--;
+            continue; 
+        }
+
+        // Verificação de CPF e senha (substitua por sua lógica real)
+        if (strcmp(cpf, "12345678901") == 0 && strcmp(senha, "123456") == 0) {
+            printf("Login efetuado com sucesso!\n");
+            return 1; // Retorna 1 para indicar sucesso
+        } else {
+            printf("CPF ou senha incorretos.\n");
+            tentativas--;
+        }
+    }
+
+    printf("Número máximo de tentativas excedido. Acesso negado.\n");
+    return 0; // Retorna 0 para indicar falha
+}
+
+int main() {
+    // Chamada da função de login
+    if (login() == 1) {
+        // Se o login for bem-sucedido, execute o resto do programa
+        printf("Bem-vindo ao sistema!\n");
+        // ... outras operações do sistema ...
+    } else {
+        printf("Acesso negado.\n");
+    }
+
+    return 0;
+}
+
