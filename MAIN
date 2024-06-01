@@ -1,0 +1,14 @@
+
+int main() {
+    // Chamada da função de login
+    if (login() == 1) {
+        // Se o login for bem-sucedido, exibe o menu
+        menu(); 
+    } else {
+        printf("Acesso negado.\n");
+    }
+
+    return 0;
+}
+
+
