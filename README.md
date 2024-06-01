@@ -1,2 +1,2 @@
-# tela_de_login
-Trabalho de faculdade em C, criar uma tela simples de login
+# Sistema_em_C
+Trabalho de faculdade em C, criar um sistema simples, com tela de login e menu de opções
