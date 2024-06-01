@@ -40,16 +40,3 @@ int login() {
     return 0; // Retorna 0 para indicar falha
 }
 
-int main() {
-    // Chamada da função de login
-    if (login() == 1) {
-        // Se o login for bem-sucedido, execute o resto do programa
-        printf("Bem-vindo ao sistema!\n");
-        // ... outras operações do sistema ...
-    } else {
-        printf("Acesso negado.\n");
-    }
-
-    return 0;
-}
-
